@@ -1,0 +1,20 @@
+{
+  "iconDefinitions": {
+    "zythxFile": {
+      "iconPath": "../icons/zythex.svg"
+    }
+  },
+  "fileExtensions": {
+    "zthx": "zythxFile"
+  },
+  "light": {
+    "fileExtensions": {
+      "zthx": "zythxFile"
+    }
+  },
+  "dark": {
+    "fileExtensions": {
+      "zthx": "zythxFile"
+    }
+  }
+}

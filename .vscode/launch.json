@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Zythx",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/zythx.exe",
+      "args": ["run", "${workspaceFolder}/testing/tester.zthx"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "stopAtEntry": false
+    }
+  ]
+}

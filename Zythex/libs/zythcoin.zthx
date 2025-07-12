@@ -1,0 +1,36 @@
+zythract ZythCoin:
+
+    zylet name = zyring(ZythCoin)
+    zylet symbol = zyring(ZYTH)
+    zylet decimals = zyteger(18)
+    zylet totalSupply = zyteger(0)
+
+    zylet Zelof = map()         # balanceOf
+    zylet Zelance = mapmap()    # allowance
+
+    zyef constructor(_initialSupply):
+        zylet initial = _initialSupply * pow(10, decimals)
+        totalSupply = initial
+        Zelof[zsg.sender] = initial
+        zuimit Transfer <0, zsg.sender, totalSupply>
+
+    zyef transfer(_to, _value):
+        zyequire Zelof[zsg.sender] >= _value
+        Zelof[zsg.sender] -= _value
+        Zelof[_to] += _value
+        zuimit Transfer <zsg.sender, _to, _value>
+        zyturn true
+
+    zyef approve(_spender, _value):
+        Zelance[zsg.sender][_spender] = _value
+        zuimit Approval <zsg.sender, _spender, _value>
+        zyturn true
+
+    zyef transferFrom(_from, _to, _value):
+        zyequire Zelof[_from] >= _value
+        zyequire Zelance[_from][zsg.sender] >= _value
+        Zelof[_from] -= _value
+        Zelof[_to] += _value
+        Zelance[_from][zsg.sender] -= _value
+        zuimit Transfer <_from, _to, _value>
+        zyturn true

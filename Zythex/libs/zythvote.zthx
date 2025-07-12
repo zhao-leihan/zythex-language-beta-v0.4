@@ -1,0 +1,32 @@
+zythract ZythVote:
+
+    zylet owner = zsg.sender
+    zylet candidates = list()
+    zylet votes = map()         # votes[candidateName] = totalVotes
+    zylet hasVoted = map()      # hasVoted[address] = true/false
+    zylet isVotingOpen = true
+
+    zyef addCandidate(_name):
+        zyequire zsg.sender == owner
+        candidates.append(_name)
+        votes[_name] = zyteger(0)
+
+    zyef vote(_candidate):
+        zyequire isVotingOpen == true
+        zyequire hasVoted[zsg.sender] != true
+        zyequire _candidate in candidates
+
+        votes[_candidate] += zyteger(1)
+        hasVoted[zsg.sender] = true
+        zuimit VoteCast <zsg.sender, _candidate>
+
+    zyef closeVoting():
+        zyequire zsg.sender == owner
+        isVotingOpen = false
+        zuimit VotingClosed <zyteger(len(candidates))>
+
+    zyef getVotes(_candidate):
+        zyturn votes[_candidate]
+
+    zyef getAllCandidates():
+        zyturn candidates

@@ -1,0 +1,30 @@
+{
+  "Zyth Print": {
+    "prefix": "zyprint",
+    "body": "zyth.print <${1:Hello World}>",
+    "description": "Print something"
+  },
+  "Zyif Statement": {
+    "prefix": "zyif",
+    "body": [
+      "zyif (${1:condition}):",
+      "    zyth.print <${2:Inside IF}>",
+      "zelxe:",
+      "    zuicide"
+    ],
+    "description": "If-Else block"
+  },
+  "Zylet Variable": {
+    "prefix": "zylet",
+    "body": "zylet ${1:varname} = ${2:value}",
+    "description": "Declare variable"
+  },
+  "Zythract Smart Contract": {
+    "prefix": "zythract",
+    "body": [
+      "zythract ${1:contract_name}:",
+      "    zylet ${2:stateVar} = ${3:0}"
+    ],
+    "description": "Zytherion smart contract"
+  }
+}

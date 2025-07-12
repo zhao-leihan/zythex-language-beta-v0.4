@@ -1,0 +1,45 @@
+{
+  "scopeName": "source.zythex",
+  "name": "Zythex",
+ "patterns": [
+  {
+    "name": "keyword.declaration.zythex",
+    "match": "\\b(zylet|function|import)\\b"
+  },
+  {
+    "name": "support.function.print.zythex",
+    "match": "\\bzyth\\.print\\b"
+  },
+  {
+    "name": "keyword.control.if.zythex",
+    "match": "\\bzyif\\b"
+  },
+  {
+    "name": "keyword.control.else.zythex",
+    "match": "\\bzelxe\\b"
+  },
+  {
+    "name": "keyword.control.flow.zythex",
+    "match": "\\b(zuicide|zyturn)\\b"
+  },
+  {
+    "name": "entity.name.type.contract.zythex",
+    "match": "\\bzythract\\b"
+  },
+  {
+    "name": "constant.numeric.zythex",
+    "match": "\\b\\d+\\b"
+  },
+  {
+    "name": "string.other.zythex",
+    "match": "<[^>]+>"
+  },
+  {
+    "name": "variable.other.zythex",
+    "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+  }
+
+  ],
+  "repository": {},
+  "fileTypes": ["zthx"]
+}

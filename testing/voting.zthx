@@ -1,0 +1,12 @@
+import ./libs/zythvote.zthx
+
+zythract SimpleStorage:
+
+    zylet storedData = 821
+
+    function set(value):
+        storedData = value
+        emit DataStored(value)
+
+    function get():
+        zyth.print <storedData>

@@ -1,0 +1,6 @@
+zylet x = 10
+zyth.print <x>
+zyif (x == 5):
+    zyth.print <x is five>
+zelxe:
+    zyth.print <not five>

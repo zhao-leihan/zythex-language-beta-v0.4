@@ -1,0 +1,66 @@
+{
+  "name": "Zythex Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#0D0C1D",
+    "editor.foreground": "#FFFFFF"
+  },
+  "tokenColors": [
+    {
+      "scope": "keyword.declaration.zythex",
+      "settings": {
+        "foreground": "#C792EA",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "support.function.print.zythex",
+      "settings": {
+        "foreground": "#82AAFF"
+      }
+    },
+    {
+      "scope": "keyword.control.if.zythex",
+      "settings": {
+        "foreground": "#FFCB6B"
+      }
+    },
+    {
+      "scope": "keyword.control.else.zythex",
+      "settings": {
+        "foreground": "#FFCB6B"
+      }
+    },
+    {
+      "scope": "keyword.control.flow.zythex",
+      "settings": {
+        "foreground": "#F07178",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "entity.name.type.contract.zythex",
+      "settings": {
+        "foreground": "#89DDFF"
+      }
+    },
+    {
+      "scope": "constant.numeric.zythex",
+      "settings": {
+        "foreground": "#F78C6C"
+      }
+    },
+    {
+      "scope": "string.other.zythex",
+      "settings": {
+        "foreground": "#C3E88D"
+      }
+    },
+    {
+      "scope": "variable.other.zythex",
+      "settings": {
+        "foreground": "#FFFFFF"
+      }
+    }
+  ]
+}
