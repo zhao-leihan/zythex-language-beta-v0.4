@@ -18,3 +18,4 @@ Zythex is a custom language for smart contracts and logic scripting.
 - VS Code Extension
 - Syntax highlighting
 - `zythract`, `zylet`, `zyif`, `zyth.print`, etc.
+- Bug compiler Fixed
