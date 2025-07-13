@@ -17,7 +17,7 @@ export function activate(context: vscode.ExtensionContext) {
 
     const terminal = vscode.window.createTerminal('Zythex Runner');
     terminal.show();
-    terminal.sendText(`${exePath} run "${filePath}"`);
+    terminal.sendText(`& "${exePath}" run "${filePath}"`);
 
   });
 
